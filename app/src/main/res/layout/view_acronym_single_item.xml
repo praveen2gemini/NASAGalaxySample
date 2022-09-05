@@ -9,7 +9,6 @@
     android:background="?selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:padding="@dimen/margin_small"
     app:cardCornerRadius="@dimen/default_card_radius"
     app:cardElevation="@dimen/default_card_elevation"
     app:cardUseCompatPadding="false">
@@ -18,40 +17,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="?selectableItemBackground"
-        android:padding="@dimen/margin_small">
+        android:background="@color/black">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/itemAcronymName"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/thumbItemView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
+            android:minHeight="200dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:ellipsize="end"
+            android:maxLines="@integer/description_line_limit"
+            android:textColor="@android:color/white"
             android:textSize="@dimen/default_title"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/itemCenterView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/app_name" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/itemAcronymFrequency"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/default_sub_title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/itemAcronymName"
             tools:text="@string/app_name" />
 
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/itemAcronymSince"
-            android:layout_width="match_parent"
+            android:id="@+id/itemCenterView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:textColor="@android:color/white"
             android:textSize="@dimen/default_sub_title"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/itemAcronymFrequency"
             tools:text="@string/app_name" />
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/itemCenterView"
+            app:layout_constraintStart_toEndOf="@+id/itemCenterView"
+            app:layout_constraintTop_toTopOf="@+id/itemCenterView"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/itemDateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_small"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/default_sub_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            tools:text="@string/app_name" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

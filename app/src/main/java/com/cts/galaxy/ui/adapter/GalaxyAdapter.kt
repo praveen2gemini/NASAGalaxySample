@@ -1,11 +1,17 @@
 package com.cts.galaxy.ui.adapter
 
+import android.app.Activity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.cts.galaxy.R
+import com.bumptech.glide.Glide
 import com.cts.galaxy.api.models.Items
 import com.cts.galaxy.databinding.ViewAcronymSingleItemBinding
+import com.cts.galaxy.utils.DeviceUtil
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.math.roundToInt
 
 class GalaxyAdapter : RecyclerView.Adapter<GalaxyAdapter.GalaxyViewHolder>() {
 
@@ -27,14 +33,33 @@ class GalaxyAdapter : RecyclerView.Adapter<GalaxyAdapter.GalaxyViewHolder>() {
                 val singleItem = if (item.data.isNotEmpty()) item.data[0] else null
                 val itemUrl = if (item.links.isNotEmpty()) item.links[0].href else ""
                 singleItem?.let {
-                    itemAcronymName.text = it.title
-                    itemAcronymFrequency.text =
-                        root.resources.getString(R.string.text_label_frequency, it.nasaId)
-                    itemAcronymSince.text = it.center.plus(itemUrl)
+                    itemTitle.text = it.title
+                    itemCenterView.text = it.center
+                    itemDateView.text = formattedDate(it.dateCreated)
+
+                    val deviceWidth = DeviceUtil.getScreenWidth(root.context as Activity)
+                    thumbItemView.layoutParams.apply {
+                        height = deviceWidth.div(1.5f).roundToInt()
+                    }
+                    Glide.with(root).load(itemUrl)
+                        .into(thumbItemView)
                 }
             }
         }
+
+        private fun formattedDate(strDate: String): String? {
+//            val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.ENGLISH)
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
+            return try {
+                val date = dateFormat.parse(strDate)
+                dateFormat.format(date)
+            } catch (pe: ParseException) {
+                pe.printStackTrace()
+                "N/A"
+            }
+        }
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GalaxyViewHolder {
         // Create a new view, which defines the UI of the list item
