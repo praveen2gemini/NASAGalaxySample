@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GalaxySample</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="empty_status_text">No data found for query</string>
+
+    <string name="text_label_since">Since: %d</string>
+    <string name="text_label_frequency">NASA ID: %s</string>
+    <string name="generic_error_message">Something Went wrong, \nPlease try again later!</string>
+
+</resources>
