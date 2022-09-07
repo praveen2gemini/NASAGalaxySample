@@ -12,5 +12,7 @@
     <dimen name="default_sub_title">16sp</dimen>
     <dimen name="default_description">14sp</dimen>
 
+    <dimen name="app_bar_height">300dp</dimen>
+
     <integer name="description_line_limit">2</integer>
 </resources>

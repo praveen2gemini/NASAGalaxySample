@@ -8,6 +8,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
+/**
+ * @author Praveen Kumar Sugumaran
+ */
 interface ApiService {
 
     @GET("search")

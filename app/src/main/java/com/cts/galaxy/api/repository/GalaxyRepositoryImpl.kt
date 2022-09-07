@@ -4,6 +4,9 @@ import com.cts.galaxy.api.ApiHelper
 import com.cts.galaxy.api.models.GalaxyDTO
 import com.cts.galaxy.api.models.GalaxyRequestDTO
 
+/**
+ * @author Praveen Kumar Sugumaran
+ */
 class GalaxyRepositoryImpl(private val apiHelper: ApiHelper) : GalaxyRepository {
     override suspend fun fetchGalaxyCollection(
         requestDTO: GalaxyRequestDTO

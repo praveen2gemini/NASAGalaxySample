@@ -1,5 +1,8 @@
 package com.cts.galaxy.api
 
+/**
+ * @author Praveen Kumar Sugumaran
+ */
 class ApiHelper(private val apiService: ApiService) {
 
     suspend fun getGalaxyCollection(

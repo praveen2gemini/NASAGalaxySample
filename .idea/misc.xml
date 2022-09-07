@@ -3,8 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../.gradle/caches/transforms-3/61c27d09828ea5d6f115103ac2867468/transformed/material-1.6.1/res/drawable/material_ic_keyboard_arrow_left_black_24dp.xml" value="0.2495" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2495" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.184375" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.27870370370370373" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/view_acronym_single_item.xml" value="0.36041666666666666" />
+        <entry key="app/src/main/res/layout/view_progress_bar.xml" value="0.36041666666666666" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.36041666666666666" />
       </map>
     </option>

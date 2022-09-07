@@ -10,6 +10,9 @@ import com.cts.galaxy.api.models.GalaxyRequestDTO
 import com.cts.galaxy.api.usecase.GalaxyUseCase
 import kotlinx.coroutines.launch
 
+/**
+ * @author Praveen Kumar Sugumaran
+ */
 class GalaxyCollectionViewModel(private val galaxyUseCase: GalaxyUseCase) : ViewModel() {
 
     private val _state = MutableLiveData<Resource<GalaxyDTO>>()

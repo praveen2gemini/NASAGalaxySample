@@ -2,6 +2,9 @@ package com.cts.galaxy.api.models
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * @author Praveen Kumar Sugumaran
+ */
 data class NasaCollection(
 
     @SerializedName("version") val version: Double,

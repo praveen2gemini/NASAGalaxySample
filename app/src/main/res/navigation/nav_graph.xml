@@ -3,10 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/DashboardFragment">
+    app:startDestination="@id/startDashboardFragment">
 
     <fragment
-        android:id="@+id/DashboardFragment"
+        android:id="@+id/startDashboardFragment"
         android:name="com.cts.galaxy.ui.DashboardFragment"
         tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/startDetailsFragment"
+        android:name="com.cts.galaxy.ui.DetailsFragment"
+        tools:layout="@layout/fragment_details" />
 </navigation>
