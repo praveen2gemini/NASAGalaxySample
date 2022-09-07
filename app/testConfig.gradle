@@ -1,0 +1,17 @@
+apply from: "${rootProject.projectDir}/app/dependency.gradle"
+ext {
+    appModuleTest = [
+            id1: test.coreTesting,
+            id2: test.jU5api,
+            id3: test.mockk,
+            id4: test.assertJ,
+            id5: test.kotlinjunit5,
+            id6: test.jU5Engine,
+            id7: test.coroutineTest
+    ]
+
+    appAndroidTest = [
+            id1: androidx.annotation,
+            id2: test.espresso
+    ]
+}

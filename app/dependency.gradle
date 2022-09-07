@@ -1,0 +1,20 @@
+apply from: "$rootProject.projectDir/app/version.gradle"
+
+ext {
+    androidx = [
+            annotation: "androidx.annotation:annotation:${androidx.annotation}"
+    ]
+
+    test = [
+            coreTesting  : "androidx.arch.core:core-testing:${test.coreTesting}",
+            jU5api       : "org.junit.jupiter:junit-jupiter-api:${test.jU5api}",
+            mockk        : "io.mockk:mockk:${test.mockk}",
+            assertJ      : "org.assertj:assertj-core:${test.assertJ}",
+            jU5Engine    : "org.junit.jupiter:junit-jupiter-engine:${test.jU5Engine}",
+            kotlinjunit5 : "io.kotlintest:kotlintest-runner-junit5:${test.kotlinjunit5}",
+            runner       : "androidx.test:runner:${test.runner}",
+            espresso     : "androidx.test.espresso:espresso-core:${test.espresso}",
+            junitTest    : "androidx.test.ext:junit:${test.junitTest}",
+            coroutineTest: "org.jetbrains.kotlinx:kotlinx-coroutines-test:${test.coroutineTest}"
+    ]
+}
